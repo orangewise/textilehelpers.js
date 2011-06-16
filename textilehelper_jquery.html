@@ -10,38 +10,15 @@
 
     <div id="textile_area">
       <div id="textile_controls"> Click on 
-        <a id="textile_bold" href="#"><b>bold</b></a>
-        <a id="textile_italic" href="#"><i>italic</i></a>
-        <a id="textile_underlined" href="#"><u>underlined</u></a>
+        <a data-textile="bold" href="#"><b>bold</b></a>
+        <a data-textile="italic" href="#"><i>italic</i></a>
+        <a data-textile="underlined" href="#"><u>underlined</u></a>
         and start typing in the area below, or select text in the area below and click on one of the links...
 		  </div>
       <div id="text_area">
         <textarea cols="95" id="page_desc" rows="20"></textarea>
       </div>
-	  </div>
-	
-	
-		<script>
-		     $(document).ready(function(){
-		       $("#textile_bold").click(function(event){
-						 console.log('bold');
-						 replaceSelection($('page_desc'),'*','*');
-		         event.preventDefault();
-		       });
-		       $("#textile_italic").click(function(event){
-						 console.log('italic');
-						 replaceSelection($('page_desc'),'_','_');
-		         event.preventDefault();
-		       });
-		       $("#textile_underlined").click(function(event){
-						 console.log('underlined');
-						 replaceSelection($('page_desc'),'+','+');
-		         event.preventDefault();
-		       });
-
-		     });
-		</script>
-	
+	  </div>	
 
 </body>
 </html>

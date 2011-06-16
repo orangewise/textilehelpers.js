@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript"></script>
+  <script src="textilehelper_jquery.js" type="text/javascript"></script>
+  <title>Textile Helper with jquery.js</title>
+</head>
+<body>
+
+    <div id="textile_area">
+      <div id="textile_controls"> Click on 
+        <a id="textile_bold" href="#"><b>bold</b></a>
+        <a id="textile_italic" href="#"><i>italic</i></a>
+        <a id="textile_underlined" href="#"><u>underlined</u></a>
+        and start typing in the area below, or select text in the area below and click on one of the links...
+		  </div>
+      <div id="text_area">
+        <textarea cols="95" id="page_desc" rows="20"></textarea>
+      </div>
+	  </div>
+	
+	
+		<script>
+		     $(document).ready(function(){
+		       $("#textile_bold").click(function(event){
+						 console.log('bold');
+						 replaceSelection($('page_desc'),'*','*');
+		         event.preventDefault();
+		       });
+		       $("#textile_italic").click(function(event){
+						 console.log('italic');
+						 replaceSelection($('page_desc'),'_','_');
+		         event.preventDefault();
+		       });
+		       $("#textile_underlined").click(function(event){
+						 console.log('underlined');
+						 replaceSelection($('page_desc'),'+','+');
+		         event.preventDefault();
+		       });
+
+		     });
+		</script>
+	
+
+</body>
+</html>

@@ -30,6 +30,7 @@ function replaceSelection(field,opening,closing){
       var href = link.attr('href'),
       method = link.data('textile');
       console.log('handleTextile '+method)
+      replaceSelection($('#page_desc'),'*','*');
     }
   };
 
